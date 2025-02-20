@@ -1,0 +1,53 @@
+# Temperature Analysis - NOAA Dataset
+
+## Project Overview
+This project analyzes historical temperature data from the NOAA dataset for the region near Ann Arbor, Michigan. The goal is to visualize record high and low temperatures from 2005-2014 and identify any record-breaking temperatures in 2015. Additionally, a map is generated to show the station locations.
+
+## Dataset Description
+The project uses two datasets:
+- **temperature.csv**: Contains daily temperature records with station ID, date, temperature element (TMAX/TMIN), and temperature value (in tenths of degrees Celsius).
+- **BinSize.csv**: Contains station location data with latitude and longitude.
+
+## Requirements
+Ensure you have the following Python libraries installed before running the notebook:
+```bash
+pip install pandas matplotlib folium notebook
+```
+
+## Steps to Run the Notebook
+1. **Load and Preprocess Data**
+   - Read temperature data and convert date columns.
+   - Remove leap days (Feb 29) for consistency.
+   - Extract `DayOfYear` for yearly analysis.
+   
+2. **Compute Temperature Records**
+   - Determine the highest and lowest temperatures for each day from 2005-2014.
+   - Identify record-breaking temperatures in 2015.
+
+3. **Visualize Data**
+   - Plot record high and low temperatures with a shaded range.
+   - Overlay scatter plots for 2015 record-breaking temperatures.
+
+4. **Map Weather Stations**
+   - Use `folium` to create an interactive map of station locations.
+
+## Running the Notebook
+- Open Jupyter Notebook:
+  ```bash
+  jupyter notebook
+  ```
+- Run each cell in the notebook to process data, generate plots, and display results.
+
+## Observations
+- The visualization effectively highlights temperature extremes over the years.
+- Record-breaking events in 2015 are clearly visible.
+- The interactive map provides geographic context to the stations used.
+
+## Future Improvements
+- Use interactive visualization libraries like Plotly.
+- Expand the dataset to include other climate variables.
+- Automate data updates with real-time NOAA data.
+
+## Author
+Developed as part of a data analysis assignment using NOAA climate data.
+
